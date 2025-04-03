@@ -1,0 +1,49 @@
+Backend:
+
+1. Dotnet Commands:
+	dotnet --help
+	dotnet --info
+	dotnet new list
+	
+	
+	dotnet new sln
+	dotnet new webapi -n API -controllers	// -controllers to have controllers folder
+	dotnet new classlib -n Domain
+	dotnet new classlib -n Application
+	dotnet new classlib -n Persistence
+	
+	// Adding the projects to the solution
+	dotnet sln add API
+	dotnet sln add Domain
+	dotnet sln add Application
+	dotnet sln add Persistence
+	
+	dotnet build
+	dotnet run
+	dotnet watch	// for hot reload functionality
+	
+	// entity framework
+	dotnet tool install --global dotnet-ef --version 8.0.14		// installing dotnet-ef globally
+	dotnet ef migrations add InitialCreate -p Persistence -s API	// -p for project where migration will run, -s for startup project
+	dotnet ef database update -p Persistence -s API		// updates the DB with any new migrations.
+	dotnet ef database drop -p Persistence -s API	// To drop the database
+	
+	
+	dotnet new gitignore	
+	
+	
+	
+2. Setting up local certificate to make https url work:
+	a. Try running the folllowing command:
+		dotnet dev-certs https --export-path ./localhost.pfx -p mypassword
+		This exports the certificate as localhost.pfx.
+
+	b. Open the Certificate Manager on your computer (win + r, then mmc).
+
+	c. Import the localhost.pfx file:
+		• For Windows, navigate to Trusted Root Certification Authorities > Certificates.
+		• For macOS, import it into System Keychain and set it to Always Trust.
+	d. Restart your browser and test again.
+	
+	
+3. 
