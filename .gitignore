@@ -488,3 +488,5 @@ CourseAssets.zip
 ImportantDocs-Personal/CourseAssets/*
 API/appsettings.json
 API/eventure.db
+API/eventure.db-shm
+API/eventure.db-wal

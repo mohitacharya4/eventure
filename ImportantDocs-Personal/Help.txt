@@ -1,6 +1,7 @@
 Backend:
 
 1. Dotnet Commands:
+
 	dotnet --help
 	dotnet --info
 	dotnet new list
@@ -46,4 +47,19 @@ Backend:
 	d. Restart your browser and test again.
 	
 	
-3. 
+3. React.js commands:
+
+	npm create vite@latest
+	npm install
+	npm run dev
+	
+	// to enable ssl communication locally for react app
+	npm install -D vite-plugin-mkcert
+	
+	
+4. VSCode extensions:
+	ESLint
+	ES7+ React/Redux/React-Native snippets
+	C# Dev Kit
+	NuGet Gallery
+	Material Icon Theme
